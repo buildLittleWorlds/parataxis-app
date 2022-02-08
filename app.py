@@ -10,7 +10,7 @@ def load_model():
     return model
 
 def check_for_deps(sent):
-  off_limits = ['csubj', 'csubjpass', 'relcl', 'advcl', 'mark']
+  off_limits = ['relcl', 'advcl', 'mark']
   for i in sent:
     if i.dep_ in off_limits:
       return "NOT paratactic (sorry)" 
